@@ -1,15 +1,19 @@
 import { say } from './dev/say.mjs'
 
-say("Age: 17. Can purchase alcohol: " + canPurchaseAlcohol(17) + "\n")
+say("Age: 17. Can purchase alcohol: Expected: No!, received: "
+  + canPurchaseAlcohol(17) + "\n")
 // expect "No!"
 
-say("Age: 21. Can purchase alcohol: " + canPurchaseAlcohol(21) + "\n");
+say("Age: 21. Can purchase alcohol: Expected: Yes!, received: "
+  + canPurchaseAlcohol(21) + "\n");
 // expect "Yes!"
 
-say("Age: 18. Can purchase alcohol: " + canPurchaseAlcohol(18, "USA") + "\n");
+say("Country: USA. Age: 18. Can purchase alcohol: Expected: No!, received: "
+  + canPurchaseAlcohol(18, "USA") + "\n");
 // expect "No!"
 
-say("Country: Sudan. Can purchase alcohol: " + canPurchaseAlcohol("Sudan") + "\n");
+say("Country: Sudan. Age: 45. Can purchase alcohol: Expected: No!, received: "
+  + canPurchaseAlcohol(45, "Sudan") + "\n");
 // expect "No!"
 
 
