@@ -6,17 +6,20 @@
  */
 function canPurchaseAlcohol(dateOfBirth, legalDrinkingAge) {
   const age = (Date.now() - Date.parse(dateOfBirth)) / 31556952000;
+
+  // We've been given line eight to help us out, but we need to fix the logic for this function.
+
   if (age < 18) {
     return "No!";
   } else {
     return "Yes!";
   }
 
-  // If age is above legalDrinkingAge, return "Yes!"
-  // Otherwise, return "No!"
-  // Use console.log() to output information to the terminal so you can see what's going on under the hood.
+  // The logic should be something like this:
+  // If age is above legalDrinkingAge: return "Yes!"
+  // Otherwise: return "No!"
 
-  return;
+  // Use console.log() to output information to the terminal so you can see what's going on under the hood.
 };
 
 
