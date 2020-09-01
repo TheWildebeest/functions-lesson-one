@@ -9,7 +9,7 @@ say("Age: 21. Can purchase alcohol: " + canPurchaseAlcohol(21) + "\n");
 say("Age: 18. Can purchase alcohol: " + canPurchaseAlcohol(18, "USA") + "\n");
 // expect "No!"
 
-say("Age:  ?  Can purchase alcohol: " + canPurchaseAlcohol("Sudan") + "\n");
+say("Country: Sudan. Can purchase alcohol: " + canPurchaseAlcohol("Sudan") + "\n");
 // expect "No!"
 
 
