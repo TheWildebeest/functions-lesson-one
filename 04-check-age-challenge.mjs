@@ -9,7 +9,7 @@ say("Age: 21. Can purchase alcohol: Expected Yes!, received " + canPurchaseAlcoh
 say("Age: 18. Can purchase alcohol: Expected No!, received " + canPurchaseAlcohol("June 28 2004", 21) + "\n");
 // expect "No!"
 
-say("Age: 45. Legal drinking age: None (drinking is banned!) " + "Can purchase alcohol: Expected \"No!\", received " + canPurchaseAlcohol("May 4 1978") + "\n");
+say("Age: 45. Legal drinking age: None (drinking is banned!) " + "Can purchase alcohol: Expected \"No!\", received " + canPurchaseAlcohol("May 4 1978", "n/a") + "\n");
 // expect "No!"
 
 
@@ -20,5 +20,9 @@ say("Age: 45. Legal drinking age: None (drinking is banned!) " + "Can purchase a
  * @returns {string} either "Yes!" or "No!"
  */
 function canPurchaseAlcohol(dateOfBirth, legalDrinkingAge) {
-  return "Yes!";
+  const age = (Date.now() - Date.parse(dateOfBirth)) / 31556952000;
+
+  /* If age is below legalDrinkingAge, return "No!"  */
+
+  return;
 };

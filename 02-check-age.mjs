@@ -22,8 +22,6 @@ say("Country: Sudan. Can purchase alcohol: " + canPurchaseAlcohol("Sudan") + "\n
 
 
 
-
-
 function canPurchaseAlcohol(age, country) {
   if (age < 21 && country === "USA") {
     return "No!";

@@ -9,22 +9,19 @@ say("Age: 21. Can purchase alcohol: Expected \"Yes!\", received " + canPurchaseA
 say("Age: 18. Can purchase alcohol: Expected \"No!\", received " + canPurchaseAlcohol("June 28 2004", 21) + "\n");
 // expect "No!"
 
-say("Age: 45. Legal drinking age: None (drinking is banned!) " + "Can purchase alcohol: Expected \"No!\", received " + canPurchaseAlcohol("May 4 1978") + "\n");
+say("Age: 45. Legal drinking age: None (drinking is banned!) " + "Can purchase alcohol: Expected \"No!\", received " + canPurchaseAlcohol("May 4 1978", "n/a") + "\n");
 // expect "No!"
 
 
 /**
  * A function that tells you whether someone can legally buy alcohol.
  * @param {number} dateOfBirth the person's date of birth in format MMMM DD YYYY
- * @param {number} legalDrinkingAge (optional) the country where the person is trying to buy a drink
+ * @param {number} legalDrinkingAge the legal  drinking age in your country
  * @returns {string} either "Yes!" or "No!"
  */
 function canPurchaseAlcohol(dateOfBirth, legalDrinkingAge) {
-  !legalDrinkingAge ? legalDrinkingAge = 999 : null;
-  const millisecsPerYear = 31556952000;
-  dateOfBirth = Date.parse(dateOfBirth) / millisecsPerYear;
-  const currentAge = (Date.now() / millisecsPerYear) - dateOfBirth;
-  if (Math.floor(currentAge) < legalDrinkingAge) {
+  const age = (Date.now() - Date.parse(dateOfBirth)) / 31556952000;
+  if (age < legalDrinkingAge) {
     return "No!"
   } else {
     return "Yes!"
