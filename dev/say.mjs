@@ -1,4 +1,4 @@
 
-export default say = (string) => {
+export const say = (string) => {
   console.log(string);
 }

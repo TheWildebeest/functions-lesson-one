@@ -1,3 +1,5 @@
+import { say } from './dev/say.mjs'
+
 say("Age: 17. Can purchase alcohol: " + canPurchaseAlcohol(17) + "\n")
 // expect "No!"
 
@@ -30,35 +32,4 @@ function canPurchaseAlcohol(age, country) {
   } else {
     return "Yes!";
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function say(string) {
-  console.log(string);
 }
