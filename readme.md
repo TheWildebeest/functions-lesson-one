@@ -27,4 +27,6 @@ git clone https://github.com/TheWildebeest/functions-lesson-one.git
   * today's date
   * the country they live in.
 
+  The current version of the function is hard-coded to check if the person is under 18. See how much you can improve it.
+
 3. Run your code code using the "Code Runner" VSCode extension by Jun Han. See if you can get the _function calls_ to return the correct output.

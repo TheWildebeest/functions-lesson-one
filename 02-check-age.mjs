@@ -1,33 +1,3 @@
-import { say } from './dev/say.mjs'
-
-say("Age: 17. Can purchase alcohol: Expected: No!, received: "
-  + canPurchaseAlcohol(17) + "\n")
-// expect "No!"
-
-say("Age: 21. Can purchase alcohol: Expected: Yes!, received: "
-  + canPurchaseAlcohol(21) + "\n");
-// expect "Yes!"
-
-say("Country: USA. Age: 18. Can purchase alcohol: Expected: No!, received: "
-  + canPurchaseAlcohol(18, "USA") + "\n");
-// expect "No!"
-
-/*
-say("Country: Sudan. Age: 45. Can purchase alcohol: Expected: No!, received: "
-  + canPurchaseAlcohol(45, "Sudan") + "\n");
-// expect "No!"
-*/
-
-
-
-
-
-
-
-
-
-
-
 function canPurchaseAlcohol(age, country) {
   if (age < 21 && country === "USA") {
     return "No!";
@@ -37,3 +7,41 @@ function canPurchaseAlcohol(age, country) {
     return "Yes!";
   }
 }
+
+
+
+
+
+
+
+
+
+
+console.log("Age: 17. Can purchase alcohol: Expected: No!, received: "
+  + canPurchaseAlcohol(17) + "\n")
+// expect "No!"
+
+console.log("Age: 21. Can purchase alcohol: Expected: Yes!, received: "
+  + canPurchaseAlcohol(21) + "\n");
+// expect "Yes!"
+
+console.log("Country: USA. Age: 18. Can purchase alcohol: Expected: No!, received: "
+  + canPurchaseAlcohol(18, "USA") + "\n");
+// expect "No!"
+
+
+// console.log("Country: Sudan. Age: 45. Can purchase alcohol: Expected: No!, received: "
+//   + canPurchaseAlcohol(45, "Sudan") + "\n");
+// // expect "No!"
+
+
+
+
+
+
+
+
+
+
+
+
